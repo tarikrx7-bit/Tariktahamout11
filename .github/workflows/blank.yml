@@ -55,9 +55,6 @@ jobs:
           Set-ItemProperty -Path 'HKCU:\Software\Microsoft\Windows\CurrentVersion\Explorer\VisualEffects' `
             -Name "VisualFXSetting" -Value 2 -Force -ErrorAction SilentlyContinue
 
-          Write-Host "Optimizing power plan..."
-          powercfg -setactive 8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c -ErrorAction SilentlyContinue
-
           Write-Host "Performance optimization complete"
 
       - name: Create RDP User with Secure Password
